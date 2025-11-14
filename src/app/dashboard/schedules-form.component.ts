@@ -89,7 +89,7 @@ import { SchedulesStore } from '../stores/schedules.store';
           [min]="0"
           [max]="60"
           showButtons
-          step="5"
+          [step]="5"
         />
       </div>
       <div class="input-container">

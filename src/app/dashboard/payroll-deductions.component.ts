@@ -89,7 +89,7 @@ export class PayrollDeductionsComponent {
   public dialogService = inject(DialogService);
 
   public editDeduction(deduction?: PayrollDeduction) {
-    this.dialogService
+    this.dialogService!
       .open(PayrollDeductionsFormComponent, {
         data: {
           payrollId: this.payrollId(),

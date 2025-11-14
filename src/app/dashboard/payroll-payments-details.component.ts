@@ -572,7 +572,7 @@ export class PayrollPaymentsDetailsComponent implements OnInit {
         break;
     }
 
-    this.dialogService
+    this.dialogService!
       .open(PaymentItemFormComponent, {
         modal: true,
         width: '36rem',
@@ -1041,7 +1041,7 @@ export class PayrollPaymentsDetailsComponent implements OnInit {
   };
 
   setCompensatoryHours(id: string, hours: number) {
-    this.dialogService
+    this.dialogService!
       .open(LateCompensatoryFormComponent, {
         data: {
           hours,

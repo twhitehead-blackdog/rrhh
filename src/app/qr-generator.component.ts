@@ -9,13 +9,13 @@ import { FormsModule } from '@angular/forms';
 import * as OTPAuth from 'otpauth';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { DropdownModule } from 'primeng/dropdown';
+import { Dropdown } from 'primeng/dropdown';
 import QRCode from 'qrcode';
 import { Employee } from './models';
 
 @Component({
   selector: 'pt-qr-generator',
-  imports: [CardModule, ButtonModule, DropdownModule, FormsModule],
+  imports: [CardModule, ButtonModule, Dropdown, FormsModule],
   template: `<div class="flex h-screen items-center justify-center w-full">
     <div class="w-full px-6 lg:w-1/3">
       <p-card header="Creacion de codigo QR">

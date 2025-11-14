@@ -73,7 +73,7 @@ import { CreditorsFormComponent } from './creditors-form.component';
 })
 export class CreditorsComponent {
   public store = inject(PayrollStore);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
   private dialogService = inject(DialogService);
 
   editCreditor(creditor?: Creditor) {

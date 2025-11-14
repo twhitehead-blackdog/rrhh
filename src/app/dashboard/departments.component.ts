@@ -77,7 +77,7 @@ import { DepartmentsFormComponent } from './departments-form.component';
 })
 export class DepartmentsComponent {
   readonly state = inject(DepartmentsStore);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
   private dialog = inject(DialogService);
   public departments = computed(() => [...this.state.entities()]);
 

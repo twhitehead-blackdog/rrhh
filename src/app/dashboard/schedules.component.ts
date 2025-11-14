@@ -116,7 +116,7 @@ export class SchedulesComponent {
   public schedules = computed(() => [...this.store.entities()]);
 
   public dialogService = inject(DialogService);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
   colorVariants = colorVariants;
   colors = Object.entries(colorVariants).map(([key, value]) => ({
     key,

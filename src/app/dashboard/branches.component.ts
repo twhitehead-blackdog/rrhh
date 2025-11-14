@@ -91,7 +91,7 @@ import { BranchesFormComponent } from './branches-form.component';
 })
 export class BranchesComponent {
   readonly store = inject(DashboardStore);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
   private dialogService = inject(DialogService);
   public branches = computed(() => [...this.store.branches.entities()]);
 

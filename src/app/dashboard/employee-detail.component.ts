@@ -372,7 +372,7 @@ export class EmployeeDetailComponent implements OnInit {
     },
   ];
   private dialog = inject(DialogService);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
 
   ngOnInit(): void {
     this.state.selectEntity(this.employee_id());

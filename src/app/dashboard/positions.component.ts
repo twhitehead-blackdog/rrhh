@@ -143,7 +143,7 @@ export class PositionsComponent implements OnInit {
   readonly store = inject(DashboardStore);
 
   private dialog = inject(DialogService);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
   public positions = computed(() => [...this.store.positions.entities()]);
 
   ngOnInit() {

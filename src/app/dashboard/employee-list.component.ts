@@ -436,7 +436,7 @@ export class EmployeeListComponent implements OnInit {
     }))
   );
   private dialog = inject(DialogService);
-  private ref = inject(DynamicDialogRef);
+  private ref: DynamicDialogRef | null = null;
   private filterService = inject(FilterService);
   callbackFilter: any;
   public cols: Column[] = [];

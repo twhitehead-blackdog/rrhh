@@ -473,7 +473,7 @@ export class EmployeesTimetableComponent implements OnInit {
     employee_schedule?: EmployeeSchedule;
     date?: Date;
   } = {}): void {
-    this.dialog
+    this.dialog!
       .open(EmployeeSchedulesFormComponent, {
         header: 'Editar horario',
         data: {

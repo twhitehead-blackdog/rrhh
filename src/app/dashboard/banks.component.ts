@@ -73,7 +73,7 @@ import { BanksFormComponent } from './banks-form.component';
 })
 export class BanksComponent {
   public store = inject(DashboardStore);
-  public ref = inject(DynamicDialogRef);
+  public ref: DynamicDialogRef | null = null;
   public dialogService = inject(DialogService);
 
   editBank(bank?: Bank) {
