@@ -9,19 +9,19 @@ import { FormsModule } from '@angular/forms';
 import * as OTPAuth from 'otpauth';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { Dropdown } from 'primeng/dropdown';
+import { Select } from 'primeng/select';
 import QRCode from 'qrcode';
 import { Employee } from './models';
 
 @Component({
   selector: 'pt-qr-generator',
-  imports: [CardModule, ButtonModule, Dropdown, FormsModule],
+  imports: [CardModule, ButtonModule, Select, FormsModule],
   template: `<div class="flex h-screen items-center justify-center w-full">
     <div class="w-full px-6 lg:w-1/3">
       <p-card header="Creacion de codigo QR">
         <div class="input-container">
           <label for="employee">Empleado</label>
-          <p-dropdown
+          <p-select
             [(ngModel)]="employee"
             [options]="employees.value()"
             placeholder="Seleccionar empleado"
@@ -34,7 +34,7 @@ import { Employee } from './models';
             <ng-template let-item pTemplate="item">
               {{ item.father_name }}, {{ item.first_name }}
             </ng-template>
-          </p-dropdown>
+          </p-select>
         </div>
         <canvas id="canvas"></canvas>
         <p-button (onClick)="generateQrCode()" [disabled]="!employee()"

@@ -131,12 +131,12 @@ export class PayrollEmployeesComponent {
 
   private confirmationService = inject(ConfirmationService);
 
-  private dialogService = inject(DialogService);
+  private dialogService = inject(DialogService)!;
 
   private http = inject(HttpClient);
 
   public editEmployee(employee?: PayrollEmployee) {
-    this.dialogService!
+    this.dialogService
       .open(PayrollEmployeesFormComponent, {
         data: {
           payrollId: this.payrollId(),

@@ -163,7 +163,7 @@ export class PayrollDebtsComponent implements OnInit {
 
   private filterService = inject(FilterService);
 
-  private dialogService = inject(DialogService);
+  private dialogService = inject(DialogService)!;
   private confirmationService = inject(ConfirmationService);
   private http = inject(HttpClient);
   private message = inject(MessageService);
@@ -185,7 +185,7 @@ export class PayrollDebtsComponent implements OnInit {
   }
 
   public editDebt(debt?: PayrollDebt) {
-    this.dialogService!
+    this.dialogService
       .open(PayrollDebtsFormComponent, {
         data: {
           payrollId: this.payrollId(),

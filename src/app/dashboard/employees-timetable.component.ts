@@ -346,7 +346,7 @@ export class EmployeesTimetableComponent implements OnInit {
 
   public currentBranch = model<string>();
   public currentPosition = model<string>();
-  private dialog = inject(DialogService);
+  private dialog = inject(DialogService)!;
   private message = inject(MessageService);
   public currentEmployees = computed(() =>
     this.store.employees
@@ -473,7 +473,7 @@ export class EmployeesTimetableComponent implements OnInit {
     employee_schedule?: EmployeeSchedule;
     date?: Date;
   } = {}): void {
-    this.dialog!
+    this.dialog
       .open(EmployeeSchedulesFormComponent, {
         header: 'Editar horario',
         data: {

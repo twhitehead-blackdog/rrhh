@@ -115,7 +115,7 @@ export class EmployeeSchedulesComponent {
       )
       .flat()
   );
-  private dialog = inject(DialogService);
+  private dialog = inject(DialogService)!;
   public colorVariants = colorVariants;
 
   private resourceSchedules = httpResource<EmployeeSchedule[]>(() => ({
@@ -133,7 +133,7 @@ export class EmployeeSchedulesComponent {
     employee_id?: string;
     employee_schedule?: EmployeeSchedule;
   } = {}): void {
-    this.dialog!
+    this.dialog
       .open(EmployeeSchedulesFormComponent, {
         header: 'Editar horario',
         data: { employee_id, employee_schedule },

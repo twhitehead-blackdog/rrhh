@@ -86,10 +86,10 @@ export class PayrollDeductionsComponent {
   private confirm = inject(ConfirmationService);
   private http = inject(HttpClient);
 
-  public dialogService = inject(DialogService);
+  public dialogService = inject(DialogService)!;
 
   public editDeduction(deduction?: PayrollDeduction) {
-    this.dialogService!
+    this.dialogService
       .open(PayrollDeductionsFormComponent, {
         data: {
           payrollId: this.payrollId(),
