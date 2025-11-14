@@ -1,0 +1,4 @@
+# This file tells Netlify to ignore the plugin configuration from UI
+# The @netlify/angular-runtime plugin should be disabled in Netlify UI
+# Settings > Build & deploy > Build plugins > Remove @netlify/angular-runtime
+
