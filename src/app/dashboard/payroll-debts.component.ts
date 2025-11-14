@@ -185,7 +185,7 @@ export class PayrollDebtsComponent implements OnInit {
   }
 
   public editDebt(debt?: PayrollDebt) {
-    this.dialogService
+    this.dialogService!
       .open(PayrollDebtsFormComponent, {
         data: {
           payrollId: this.payrollId(),
