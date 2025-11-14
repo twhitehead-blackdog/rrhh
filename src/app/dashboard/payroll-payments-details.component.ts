@@ -388,7 +388,7 @@ export class PayrollPaymentsDetailsComponent implements OnInit {
       ) ?? []
   );
 
-  private dialogService = inject(DialogService)!;
+  private dialogService = inject(DialogService) as DialogService;
   private dialogRef = inject(DynamicDialogRef);
   private injector = inject(Injector);
   private dashboardStore = inject(DashboardStore);

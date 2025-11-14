@@ -346,7 +346,7 @@ export class EmployeesTimetableComponent implements OnInit {
 
   public currentBranch = model<string>();
   public currentPosition = model<string>();
-  private dialog = inject(DialogService)!;
+  private dialog = inject(DialogService) as DialogService;
   private message = inject(MessageService);
   public currentEmployees = computed(() =>
     this.store.employees

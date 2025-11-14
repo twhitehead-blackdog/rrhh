@@ -131,7 +131,7 @@ export class PayrollEmployeesComponent {
 
   private confirmationService = inject(ConfirmationService);
 
-  private dialogService = inject(DialogService)!;
+  private dialogService = inject(DialogService) as DialogService;
 
   private http = inject(HttpClient);
 

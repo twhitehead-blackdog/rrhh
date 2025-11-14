@@ -163,7 +163,7 @@ export class PayrollDebtsComponent implements OnInit {
 
   private filterService = inject(FilterService);
 
-  private dialogService = inject(DialogService)!;
+  private dialogService = inject(DialogService) as DialogService;
   private confirmationService = inject(ConfirmationService);
   private http = inject(HttpClient);
   private message = inject(MessageService);

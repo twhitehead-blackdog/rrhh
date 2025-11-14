@@ -115,7 +115,7 @@ export class EmployeeSchedulesComponent {
       )
       .flat()
   );
-  private dialog = inject(DialogService)!;
+  private dialog = inject(DialogService) as DialogService;
   public colorVariants = colorVariants;
 
   private resourceSchedules = httpResource<EmployeeSchedule[]>(() => ({

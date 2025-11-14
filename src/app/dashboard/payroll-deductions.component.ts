@@ -86,7 +86,7 @@ export class PayrollDeductionsComponent {
   private confirm = inject(ConfirmationService);
   private http = inject(HttpClient);
 
-  public dialogService = inject(DialogService)!;
+  public dialogService = inject(DialogService) as DialogService;
 
   public editDeduction(deduction?: PayrollDeduction) {
     this.dialogService
